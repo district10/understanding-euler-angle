@@ -121,10 +121,12 @@
         return deg/180*Math.PI;
     };
     gui.add(config, 'alpha').name("Alpha").min(-180).max(+180).step(0.1).listen().onChange(function(angle){
-        config.applyAlpha();
+        // config.applyAlpha();
+        config.applyAlphaBetaGamma();
     });
     gui.add(config, 'beta').name("Beta").min(-180).max(+180).step(0.1).listen().onChange(function(angle){
-        config.applyAlphaBeta();
+        // config.applyAlphaBeta();
+        config.applyAlphaBetaGamma();
     });
     gui.add(config, 'gamma').name("Gamma").min(-180).max(+180).step(0.1).listen().onChange(function(angle){
         config.applyAlphaBetaGamma();
